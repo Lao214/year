@@ -41,5 +41,6 @@ public class ReportData implements Serializable {
 
     private String participation;
 
+    private String jobNo;
 
 }
