@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface ReportDataMapper extends BaseMapper<ReportData> {
 
+    ReportData getOneByJobNo(String jobNo);
 }

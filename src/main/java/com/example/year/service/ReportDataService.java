@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ReportDataService extends IService<ReportData> {
 
+    ReportData getOneByJobNo(String jobNo);
+
 }

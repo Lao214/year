@@ -17,4 +17,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReportDataServiceImpl extends ServiceImpl<ReportDataMapper, ReportData> implements ReportDataService {
 
+    @Override
+    public ReportData getOneByJobNo(String jobNo) {
+        return baseMapper.getOneByJobNo(jobNo);
+    }
 }
