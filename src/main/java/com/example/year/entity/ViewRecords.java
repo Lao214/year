@@ -23,23 +23,18 @@ public class ViewRecords implements Serializable {
     private static final long serialVersionUID = 1L;
 
 
-      @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
 
     private String jobNo;
 
-
-    private Integer indexTwo;
-
-
-    private Integer indexThree;
-
-
     private Date createTime;
 
+    private String source;
 
     private String comment;
 
+    private Date updateTime;
 
 }

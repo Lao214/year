@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 /**
  * <p>
  *  前端控制器
@@ -30,6 +32,7 @@ public class ViewRecordsController {
 
     @PostMapping("/view")
     public Result view(@RequestBody ViewRecords view){
+        view.setCreateTime(new Date());
         boolean save = viewRecordsService.save(view);
         if (save) {
             return Result.success();
@@ -44,6 +47,7 @@ public class ViewRecordsController {
         QueryWrapper<ViewRecords> viewRecordsQueryWrapper =new QueryWrapper<>();
         viewRecordsQueryWrapper.eq("id",view.getId());
         viewRecordsQueryWrapper.eq("comment",view.getComment());
+        viewRecordsQueryWrapper.eq("update_time",new Date());
         boolean save = viewRecordsService.update(viewRecordsQueryWrapper);
         if (save) {
             return Result.success();

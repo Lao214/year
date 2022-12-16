@@ -124,5 +124,11 @@ public class AnnualStudyChecklist implements Serializable {
 
     private BigDecimal rate5;
 
+    private String StuName;
 
+    private String timeLab;
+
+    private String stuLab;
+
+    private String examLab;
 }
