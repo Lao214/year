@@ -4,7 +4,7 @@
 
     <select id="getOneByJobNo" parameterType="java.lang.String" resultType="com.example.year.entity.AnnualStudyChecklist">
         select * from Annual_Study_Checklist
-        where job_no = #{jobNo} limit 1;
+        where username = #{jobNo} limit 1;
     </select>
 
 </mapper>
