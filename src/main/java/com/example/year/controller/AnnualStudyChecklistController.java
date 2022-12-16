@@ -2,9 +2,7 @@ package com.example.year.controller;
 
 
 import com.example.year.entity.AnnualStudyChecklist;
-import com.example.year.entity.ReportData;
 import com.example.year.service.AnnualStudyChecklistService;
-import com.example.year.service.ReportDataService;
 import com.example.year.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
