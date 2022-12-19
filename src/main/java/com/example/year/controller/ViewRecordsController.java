@@ -47,6 +47,7 @@ public class ViewRecordsController {
         QueryWrapper<ViewRecords> viewRecordsQueryWrapper =new QueryWrapper<>();
         viewRecordsQueryWrapper.eq("id",view.getId());
         viewRecordsQueryWrapper.eq("comment",view.getComment());
+        viewRecordsQueryWrapper.eq("study_list",view.getStudyList());
         viewRecordsQueryWrapper.eq("update_time",new Date());
         boolean save = viewRecordsService.update(viewRecordsQueryWrapper);
         if (save) {

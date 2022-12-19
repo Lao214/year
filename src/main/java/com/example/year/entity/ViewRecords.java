@@ -26,6 +26,7 @@ public class ViewRecords implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    private String studyList;
 
     private String jobNo;
 
