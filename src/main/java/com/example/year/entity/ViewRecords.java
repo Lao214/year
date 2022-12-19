@@ -36,6 +36,12 @@ public class ViewRecords implements Serializable {
 
     private String comment;
 
+    private String browser;
+
+    private String device;
+
+    private String ua;
+
     private Date updateTime;
 
 }

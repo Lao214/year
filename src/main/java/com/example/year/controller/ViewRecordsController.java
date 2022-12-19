@@ -32,10 +32,12 @@ public class ViewRecordsController {
 
     @PostMapping("/view")
     public Result view(@RequestBody ViewRecords view){
+//        view.setUa(view.getUa().replace(".",""));
+//        view.setUa(view.getUa().replace(";",""));
         view.setCreateTime(new Date());
         boolean save = viewRecordsService.save(view);
         if (save) {
-            return Result.success();
+            return Result.success().data("data",view);
         } else {
             return Result.success().msg("插入失败");
         }
@@ -44,12 +46,7 @@ public class ViewRecordsController {
 
     @PostMapping("/update")
     public Result update(@RequestBody ViewRecords view){
-        QueryWrapper<ViewRecords> viewRecordsQueryWrapper =new QueryWrapper<>();
-        viewRecordsQueryWrapper.eq("id",view.getId());
-        viewRecordsQueryWrapper.eq("comment",view.getComment());
-        viewRecordsQueryWrapper.eq("study_list",view.getStudyList());
-        viewRecordsQueryWrapper.eq("update_time",new Date());
-        boolean save = viewRecordsService.update(viewRecordsQueryWrapper);
+        boolean save = viewRecordsService.updateById(view);
         if (save) {
             return Result.success();
         } else {
