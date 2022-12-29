@@ -40,8 +40,6 @@ public class ViewRecords implements Serializable {
 
     private String device;
 
-    private String ua;
-
     private Date updateTime;
 
 }
