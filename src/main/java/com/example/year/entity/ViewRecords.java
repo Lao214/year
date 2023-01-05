@@ -42,4 +42,5 @@ public class ViewRecords implements Serializable {
 
     private Date updateTime;
 
+    private String type;
 }
