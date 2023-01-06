@@ -36,6 +36,8 @@ public class Sunshine implements Serializable {
 
     private String device;
 
+    private String creditTypeCode;
+
     private Integer mon;
 
     private Integer coursenumMon;
